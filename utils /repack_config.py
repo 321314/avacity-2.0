@@ -14,10 +14,10 @@ z.close()
 with open("files/data/config_all_ru.zip", mode="rb") as f:
     hash_ = hashlib.md5(f.read()).hexdigest()
 os.rename("files/data/config_all_ru.zip",
-          f"files/data/config_all_ru_{hash_}.zip")
+          f"files/data/config_all_ru_{hash_}.zip"
 with open("files/versions.json") as f:
     versions = json.load(f)
 versions["data/config_all_ru.zip"] = hash_
 with open("files/versions.json", "w") as f:
     f.write(json.dumps(versions))
-print(f"Готово, файл config_all_ru_{hash_}.zip(уже записан в versions.json)")
+print(f"Готово, файл config_all_ru_{hash_}.zip(уже записан в versions.json)")/просим не ь файліименят
